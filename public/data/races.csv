@@ -1,0 +1,91 @@
+race,icon,game,color,lordId,lordName,lorddlc
+Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a2/Karaz-a-Karak.png/revision/latest,WH1,#d4a843,thorgrim,Thorgrim Grudgebearer,Base
+Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a2/Karaz-a-Karak.png/revision/latest,WH1,#d4a843,grombrindal,Grombrindal,FLC
+Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a2/Karaz-a-Karak.png/revision/latest,WH1,#d4a843,ungrim,Ungrim Ironfist,Base
+Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a2/Karaz-a-Karak.png/revision/latest,WH1,#d4a843,belegar,Belegar Ironhammer,DLC
+Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a2/Karaz-a-Karak.png/revision/latest,WH1,#d4a843,thorek,Thorek Ironbrow,DLC
+Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a2/Karaz-a-Karak.png/revision/latest,WH1,#d4a843,malakai,Malakai Makaisson,Thrones of Decay
+Empire,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/e/e9/Reikland.png/revision/latest?cb=20200314213259,WH1,#c8a020,karlfranz,Karl Franz,Base
+Empire,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/e/e9/Reikland.png/revision/latest?cb=20200314213259,WH1,#c8a020,balthasar,Balthasar Gelt,Base
+Empire,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/e/e9/Reikland.png/revision/latest?cb=20200314213259,WH1,#c8a020,volkmar,Volkmar the Grim,DLC
+Empire,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/e/e9/Reikland.png/revision/latest?cb=20200314213259,WH1,#c8a020,elspeth,Elspeth von Draken,Thrones of Decay
+Greenskins,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/1/14/Grimgor%27s_%27Ardboyz.png/revision/latest,WH1,#4a8a20,grimgor,Grimgor Ironhide,Base
+Greenskins,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/1/14/Grimgor%27s_%27Ardboyz.png/revision/latest,WH1,#4a8a20,azhag,Azhag the Slaughterer,Base
+Greenskins,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/1/14/Grimgor%27s_%27Ardboyz.png/revision/latest,WH1,#4a8a20,skarsnik,Skarsnik,DLC
+Greenskins,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/1/14/Grimgor%27s_%27Ardboyz.png/revision/latest,WH1,#4a8a20,wurrzag,Wurrzag,FLC
+Greenskins,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/1/14/Grimgor%27s_%27Ardboyz.png/revision/latest,WH1,#4a8a20,gorbad,Gorbad Ironclaw,Omens of Destruction
+Vampire Counts,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/8/86/Sylvania.png/revision/latest,WH1,#6030a0,mannfred,Mannfred von Carstein,Base
+Vampire Counts,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/8/86/Sylvania.png/revision/latest,WH1,#6030a0,kemmler,Heinrich Kemmler,Base
+Vampire Counts,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/8/86/Sylvania.png/revision/latest,WH1,#6030a0,vlad,Vlad von Carstein,DLC
+Vampire Counts,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/8/86/Sylvania.png/revision/latest,WH1,#6030a0,isabella,Isabella von Carstein,DLC
+Vampire Counts,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/8/86/Sylvania.png/revision/latest,WH1,#6030a0,helman,Helman Ghorst,DLC
+Warriors of Chaos,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/f6/Warhost_of_the_Apocalypse.png/revision/latest,WH1 DLC,#8a1818,archaon,Archaon the Everchosen,Chaos Warriors
+Warriors of Chaos,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/f6/Warhost_of_the_Apocalypse.png/revision/latest,WH1 DLC,#8a1818,kholek,Kholek Suneater,Chaos Warriors
+Warriors of Chaos,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/f6/Warhost_of_the_Apocalypse.png/revision/latest,WH1 DLC,#8a1818,sigvald,Sigvald the Magnificent,Chaos Warriors
+Beastmen,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/c/c9/Warherd_of_the_Shadowgave.png/revision/latest,WH1 DLC,#5a6820,khazrak,Khazrak the One-Eye,Beastmen
+Beastmen,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/c/c9/Warherd_of_the_Shadowgave.png/revision/latest,WH1 DLC,#5a6820,malagor,Malagor the Dark Omen,Beastmen
+Beastmen,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/c/c9/Warherd_of_the_Shadowgave.png/revision/latest,WH1 DLC,#5a6820,morghur,Morghur the Shadowgave,Beastmen
+Wood Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/9/93/Argwylon.png/revision/latest,WH1 DLC,#2a7a3a,orion,Orion,Wood Elves
+Wood Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/9/93/Argwylon.png/revision/latest,WH1 DLC,#2a7a3a,durthu,Durthu,Wood Elves
+Wood Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/9/93/Argwylon.png/revision/latest,WH1 DLC,#2a7a3a,drycha,Drycha,Wood Elves
+Wood Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/9/93/Argwylon.png/revision/latest,WH1 DLC,#2a7a3a,alarielle_we,Alarielle the Everchosen,DLC
+Wood Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/9/93/Argwylon.png/revision/latest,WH1 DLC,#2a7a3a,sisters,Sisters of Twilight,DLC
+Bretonnia,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/c/c1/Bretonnia.png/revision/latest?cb=20210805002056,WH1 FLC,#1a5090,louen,Louen Leoncoeur,FLC
+Bretonnia,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/c/c1/Bretonnia.png/revision/latest?cb=20210805002056,WH1 FLC,#1a5090,repanse,Repanse de Lyonesse,DLC
+Bretonnia,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/c/c1/Bretonnia.png/revision/latest?cb=20210805002056,WH1 FLC,#1a5090,the_fay,The Fay Enchantress,DLC
+Norsca,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/3/32/Wintertooth.png/revision/latest,WH1 DLC,#2a5878,wulfrik,Wulfrik the Wanderer,Norsca
+Norsca,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/3/32/Wintertooth.png/revision/latest,WH1 DLC,#2a5878,throgg,Throgg,Norsca
+Norsca,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/3/32/Wintertooth.png/revision/latest,WH1 DLC,#2a5878,sayl,Sayl the Faithless,Tides of Torment
+High Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/4f/Eataine.png/revision/latest?cb=20171009134155,WH2,#c0a850,tyrion,Tyrion,Base
+High Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/4f/Eataine.png/revision/latest?cb=20171009134155,WH2,#c0a850,teclis,Teclis,Base
+High Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/4f/Eataine.png/revision/latest?cb=20171009134155,WH2,#c0a850,alarielle,Alarielle the Radiant,DLC
+High Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/4f/Eataine.png/revision/latest?cb=20171009134155,WH2,#c0a850,imrik,Imrik,DLC
+High Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/4f/Eataine.png/revision/latest?cb=20171009134155,WH2,#c0a850,eltharion,Eltharion the Grim,DLC
+High Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/4f/Eataine.png/revision/latest?cb=20171009134155,WH2,#c0a850,aislinn,Sea Lord Aislinn,Tides of Torment
+Dark Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/5/5a/Naggarond.png/revision/latest,WH2,#5020a0,malekith,Malekith,Base
+Dark Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/5/5a/Naggarond.png/revision/latest,WH2,#5020a0,morathi,Morathi,Base
+Dark Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/5/5a/Naggarond.png/revision/latest,WH2,#5020a0,lokhir,Lokhir Fellheart,DLC
+Dark Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/5/5a/Naggarond.png/revision/latest,WH2,#5020a0,malus,Malus Darkblade,DLC
+Dark Elves,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/5/5a/Naggarond.png/revision/latest,WH2,#5020a0,hellebron,Crone Hellebron,DLC
+Lizardmen,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/2/2c/Itza.png/revision/latest,WH2,#20a080,mazdamundi,Lord Mazdamundi,Base
+Lizardmen,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/2/2c/Itza.png/revision/latest,WH2,#20a080,kroq,Kroq-Gar,Base
+Lizardmen,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/2/2c/Itza.png/revision/latest,WH2,#20a080,gorrok,Gor-Rok,DLC
+Lizardmen,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/2/2c/Itza.png/revision/latest,WH2,#20a080,nakai,Nakai the Wanderer,DLC
+Lizardmen,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/2/2c/Itza.png/revision/latest,WH2,#20a080,oxyotl,Oxyotl,DLC
+Skaven,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/41/Clan_Mors.png/revision/latest,WH2,#6a5030,queek,Queek Headtaker,Base
+Skaven,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/41/Clan_Mors.png/revision/latest,WH2,#6a5030,tretch,Tretch Craventail,Base
+Skaven,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/41/Clan_Mors.png/revision/latest,WH2,#6a5030,ikitclaw,Ikit Claw,DLC
+Skaven,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/41/Clan_Mors.png/revision/latest,WH2,#6a5030,snikch,Deathmaster Snikch,DLC
+Skaven,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/4/41/Clan_Mors.png/revision/latest,WH2,#6a5030,throt,Throt the Unclean,DLC
+Tomb Kings,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/fd/Khemri.png/revision/latest,WH2 DLC,#c8a030,settra,Settra the Imperishable,Tomb Kings
+Tomb Kings,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/fd/Khemri.png/revision/latest,WH2 DLC,#c8a030,khalida,Khalida,Tomb Kings
+Tomb Kings,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/fd/Khemri.png/revision/latest,WH2 DLC,#c8a030,khatep,Khatep,Tomb Kings
+Tomb Kings,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/fd/Khemri.png/revision/latest,WH2 DLC,#c8a030,arkhan,Arkhan the Black,Tomb Kings
+Vampire Coast,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/d/da/Vampire_Coast.png/revision/latest?cb=20181009142732,WH2 DLC,#207860,luthor,Luthor Harkon,Vampire Coast
+Vampire Coast,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/d/da/Vampire_Coast.png/revision/latest?cb=20181009142732,WH2 DLC,#207860,aranessa,Aranessa Saltspite,Vampire Coast
+Vampire Coast,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/d/da/Vampire_Coast.png/revision/latest?cb=20181009142732,WH2 DLC,#207860,noctilus,Count Noctilus,Vampire Coast
+Vampire Coast,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/d/da/Vampire_Coast.png/revision/latest?cb=20181009142732,WH2 DLC,#207860,cylostra,Cylostra Direfin,Vampire Coast
+Kislev,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/ab/The_Ice_Court.png/revision/latest?cb=20220219203731,WH3,#4080c0,katarin,Katarin the Ice Queen,Base
+Kislev,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/ab/The_Ice_Court.png/revision/latest?cb=20220219203731,WH3,#4080c0,kostaltyn,Kostaltyn,Base
+Grand Cathay,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/0/0d/The_Northern_Provinces.png/revision/latest?cb=20220219203742,WH3,#c82020,miao_ying,Miao Ying,Base
+Grand Cathay,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/0/0d/The_Northern_Provinces.png/revision/latest?cb=20220219203742,WH3,#c82020,zhao_ming,Zhao Ming,Base
+Grand Cathay,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/0/0d/The_Northern_Provinces.png/revision/latest?cb=20220219203742,WH3,#c82020,li_dao,Li Dao,FLC
+Grand Cathay,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/0/0d/The_Northern_Provinces.png/revision/latest?cb=20220219203742,WH3,#c82020,yuan_bo,Yuan Bo,Shadows of Change
+Khorne,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/f2/Exiles_of_Khorne.png/revision/latest,WH3,#c01010,skarbrand,Skarbrand,Base
+Khorne,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/f/f2/Exiles_of_Khorne.png/revision/latest,WH3,#c01010,valkia,Valkia the Bloody,Champions of Chaos
+Tzeentch,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a0/Oracles_of_Tzeentch.png/revision/latest,WH3,#10a090,kairos,Kairos Fateweaver,Base
+Tzeentch,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a0/Oracles_of_Tzeentch.png/revision/latest,WH3,#10a090,vilitch,Vilitch the Curseling,Champions of Chaos
+Tzeentch,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/a/a0/Oracles_of_Tzeentch.png/revision/latest,WH3,#10a090,bluescribes,The Blue Scribes,Shadows of Change
+Nurgle,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/8/8d/Poxmakers_of_Nurgle.png/revision/latest,WH3,#5a7820,kugath,Ku'gath Plaguefather,Base
+Nurgle,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/8/8d/Poxmakers_of_Nurgle.png/revision/latest,WH3,#5a7820,epidemius,Epidemius,Base
+Nurgle,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/8/8d/Poxmakers_of_Nurgle.png/revision/latest,WH3,#5a7820,festus,Festus the Leechlord,Champions of Chaos
+Slaanesh,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/d/d7/Seducers_of_Slaanesh.png/revision/latest,WH3,#8030a0,nkari,N'Kari,Base
+Slaanesh,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/d/d7/Seducers_of_Slaanesh.png/revision/latest,WH3,#8030a0,azazel,Azazel,Champions of Chaos
+Slaanesh,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/d/d7/Seducers_of_Slaanesh.png/revision/latest,WH3,#8030a0,dechala,Dechala the Denied One,Tides of Torment
+Slaanesh,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/d/d7/Seducers_of_Slaanesh.png/revision/latest,WH3,#8030a0,masque,The Masque,FLC
+Ogre Kingdoms,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/1/14/Goldtooth.png/revision/latest?cb=20220219205014,WH3 DLC,#8a6030,greasus,Greasus Goldtooth,Ogre Kingdoms
+Ogre Kingdoms,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/1/14/Goldtooth.png/revision/latest?cb=20220219205014,WH3 DLC,#8a6030,skrag,Skrag the Slaughterer,Ogre Kingdoms
+Chaos Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/9/9c/Disciples_of_Hashut.png/revision/latest,WH3 DLC,#8a1010,astragoth,Astragoth Ironhand,Forge of CDs
+Chaos Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/9/9c/Disciples_of_Hashut.png/revision/latest,WH3 DLC,#8a1010,drazhoath,Drazhoath the Ashen,Forge of CDs
+Chaos Dwarfs,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/9/9c/Disciples_of_Hashut.png/revision/latest,WH3 DLC,#8a1010,zhatan,Zhatan the Black,Forge of CDs
+Daemon Prince,https://static.wikia.nocookie.net/totalwarhammer_gamepedia/images/3/30/Shadow_Legion.png/revision/latest,WH3,#4a1060,daemonprince,Daemon Prince (Custom),Base
