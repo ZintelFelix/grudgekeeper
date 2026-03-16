@@ -11,6 +11,7 @@
     "electron:build": "vite build && electron-builder"
   },
   "dependencies": {
+    "express": "^4.18.2",
     "papaparse": "^5.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -30,18 +31,81 @@
     "productName": "Grudgekeeper",
     "files": [
       "dist/**/*",
-      "electron-main.js"
+      "electron-main.js",
+      "node_modules/express/**/*",
+      "node_modules/serve-static/**/*",
+      "node_modules/finalhandler/**/*",
+      "node_modules/path-to-regexp/**/*",
+      "node_modules/mime/**/*",
+      "node_modules/mime-types/**/*",
+      "node_modules/mime-db/**/*",
+      "node_modules/parseurl/**/*",
+      "node_modules/depd/**/*",
+      "node_modules/debug/**/*",
+      "node_modules/ms/**/*",
+      "node_modules/on-finished/**/*",
+      "node_modules/ee-first/**/*",
+      "node_modules/escape-html/**/*",
+      "node_modules/utils-merge/**/*",
+      "node_modules/qs/**/*",
+      "node_modules/range-parser/**/*",
+      "node_modules/send/**/*",
+      "node_modules/encodeurl/**/*",
+      "node_modules/fresh/**/*",
+      "node_modules/destroy/**/*",
+      "node_modules/etag/**/*",
+      "node_modules/router/**/*",
+      "node_modules/body-parser/**/*",
+      "node_modules/raw-body/**/*",
+      "node_modules/iconv-lite/**/*",
+      "node_modules/unpipe/**/*",
+      "node_modules/bytes/**/*",
+      "node_modules/http-errors/**/*",
+      "node_modules/inherits/**/*",
+      "node_modules/setprototypeof/**/*",
+      "node_modules/statuses/**/*",
+      "node_modules/toidentifier/**/*",
+      "node_modules/type-is/**/*",
+      "node_modules/media-typer/**/*",
+      "node_modules/accepts/**/*",
+      "node_modules/negotiator/**/*",
+      "node_modules/proxy-addr/**/*",
+      "node_modules/forwarded/**/*",
+      "node_modules/ipaddr.js/**/*",
+      "node_modules/vary/**/*",
+      "node_modules/content-type/**/*",
+      "node_modules/content-disposition/**/*",
+      "node_modules/safe-buffer/**/*",
+      "node_modules/array-flatten/**/*"
     ],
     "win": {
-      "target": "nsis",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
       "icon": "icon.ico"
     },
     "nsis": {
-      "oneClick": true,
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
       "installerIcon": "icon.ico",
+      "license": "installer-license.txt",
       "shortcutName": "Grudgekeeper",
       "createDesktopShortcut": true,
-      "createStartMenuShortcut": true
+      "createStartMenuShortcut": true,
+      "runAfterFinish": false,
+      "menuCategory": "Grudgekeeper",
+      "deleteAppDataOnUninstall": false
     },
     "directories": {
       "output": "release"

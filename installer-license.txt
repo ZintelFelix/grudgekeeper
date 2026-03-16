@@ -1,0 +1,23 @@
+GRUDGEKEEPER — CAMPAIGN CHRONICLES
+License Agreement
+
+Copyright (c) 2026 Felix Zintel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software to use it for personal, non-commercial purposes.
+
+DATA & PRIVACY
+Grudgekeeper stores all user data (campaign progress, notes, settings) locally
+on your device using your browser's localStorage. No data is ever transmitted
+to any server. No account is required. No analytics or tracking of any kind.
+
+DISCLAIMER
+Grudgekeeper is a fan project and is not affiliated with Creative Assembly or
+SEGA. Total War: Warhammer III and all related trademarks are the property of
+their respective owners.
+
+THIRD-PARTY SOFTWARE
+This application is built with Electron, React, and other open-source libraries.
+Their respective licenses are included in the installation directory.
+
+By installing this software you agree to these terms.

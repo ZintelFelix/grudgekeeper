@@ -1,7 +1,18 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
+const express = require("express");
+const http = require("http");
 
 const isDev = process.env.NODE_ENV === "development";
+const PORT = 3991;
+
+function startServer() {
+    return new Promise((resolve) => {
+        const server = express();
+        server.use(express.static(path.join(__dirname, "dist")));
+        http.createServer(server).listen(PORT, () => resolve());
+    });
+}
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -21,13 +32,14 @@ function createWindow() {
     if (isDev) {
         win.loadURL("http://localhost:5173");
     } else {
-        win.loadFile(path.join(__dirname, "dist", "index.html"));
+        win.loadURL(`http://localhost:${PORT}`);
     }
 
     win.setMenuBarVisibility(false);
 }
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
+    if (!isDev) await startServer();
     createWindow();
 
     app.on("activate", () => {

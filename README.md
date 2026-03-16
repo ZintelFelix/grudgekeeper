@@ -2,12 +2,21 @@
 
 > A campaign progression tracker for **Total War: Warhammer III**
 
-Track every campaign you've played, log your victory type, analyse your stats and plan what to play next — all stored locally in your browser, no account needed.
+Track every campaign you've played, log your victory type, analyse your stats and plan what to play next — all stored locally on your device, no account needed.
 
 ![License](https://img.shields.io/badge/license-MIT-gold)
 ![React](https://img.shields.io/badge/React-18-61dafb?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-5-646cff?logo=vite)
 ![Electron](https://img.shields.io/badge/Electron-30-47848f?logo=electron)
+![Release](https://img.shields.io/github/v/release/ZintelFelix/grudgekeeper)
+
+---
+
+## Download
+
+**[⬇ Download latest release](https://github.com/ZintelFelix/grudgekeeper/releases/latest)**
+
+Windows only. No installation of Node.js or any other software required — just download, install and play.
 
 ---
 
@@ -37,7 +46,7 @@ _Statistics — completion charts, playstyle distribution and victory type break
 - **Notes** — freeform notebook for strategies, observations and campaign impressions
 - **Random Picker** — spin the dice and let Grudgekeeper pick your next campaign
 - **Dark & Light Mode** — TWW3-authentic dark theme and a Dwarf-inspired stone/gold light theme
-- **Fully local** — all progress saved in `localStorage`, no server, no login
+- **Fully local** — all progress saved on your device, no server, no login, no tracking
 
 ---
 
@@ -47,43 +56,38 @@ _Statistics — completion charts, playstyle distribution and victory type break
 | -------------------------------------- | ---------------------------- |
 | [React 18](https://react.dev)          | UI framework                 |
 | [Vite 5](https://vitejs.dev)           | Build tool                   |
+| [Electron](https://www.electronjs.org) | Desktop app wrapper          |
 | [Recharts](https://recharts.org)       | Charts in Statistics         |
 | [PapaParse](https://www.papaparse.com) | CSV parsing for faction data |
-| [Electron](https://www.electronjs.org) | Optional desktop app wrapper |
 
 ---
 
 ## Getting Started
 
-### Prerequisites
+### For end users
 
-- Node.js 18+
-- npm
+Download the installer from the [Releases page](https://github.com/ZintelFelix/grudgekeeper/releases/latest), run it and follow the setup wizard. No additional software required.
 
-### Run as a desktop app (recommended)
+### For developers
+
+Prerequisites: Node.js 18+, npm
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/grudgekeeper.git
+git clone https://github.com/ZintelFelix/grudgekeeper.git
 cd grudgekeeper
 npm install
 npm run electron:dev
 ```
 
-### Run in the browser (alternative)
+Run in the browser instead:
 
 ```bash
 npm run dev
 ```
 
-Then open [http://localhost:5173](http://localhost:5173).
-
-### Build
+Build a Windows installer:
 
 ```bash
-# Web build
-npm run build
-
-# Desktop installer (Windows)
 npm run electron:build
 ```
 
