@@ -1,6 +1,6 @@
 {
   "name": "grudgekeeper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Total War: Warhammer III – Campaign progression tracker",
   "main": "electron-main.js",
   "scripts": {
