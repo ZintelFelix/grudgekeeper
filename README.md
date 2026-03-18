@@ -38,7 +38,7 @@ _Statistics — completion charts, playstyle distribution and victory type break
 
 ## Features
 
-- **Roadmap** — tiered campaign guide covering all 28 factions with difficulty ratings, playstyle tags, start pressure, campaign tips and key mechanics
+- **Roadmap** — tiered campaign guide covering all 24 races with difficulty ratings, playstyle tags, start pressure, campaign tips and key mechanics
 - **All Factions** — filterable and sortable table of all roadmap entries with completion status
 - **Faction Browser** — browse all Legendary Lords organised by race, build a custom play queue
 - **My List** — personal campaign queue with reordering, victory tracking and per-campaign notes
