@@ -9,6 +9,7 @@ Track every campaign you've played, log your victory type, analyse your stats an
 ![Vite](https://img.shields.io/badge/Vite-5-646cff?logo=vite)
 ![Electron](https://img.shields.io/badge/Electron-30-47848f?logo=electron)
 ![Release](https://img.shields.io/github/v/release/ZintelFelix/grudgekeeper)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue?logo=paypal)](https://paypal.me/FelixZintel)
 
 ---
 
@@ -18,21 +19,25 @@ Track every campaign you've played, log your victory type, analyse your stats an
 
 Windows only. No installation of Node.js or any other software required — just download, install and play.
 
+If you enjoy Grudgekeeper and want to support development, a small donation is always appreciated — but never expected!
+
+[![Donate via PayPal](https://img.shields.io/badge/Donate-PayPal-blue?logo=paypal)](https://paypal.me/FelixZintel)
+
 ---
 
 ## Screenshots
 
 ![Dashboard](screenshots/dashboard.png)
-_Dashboard — active campaign, tier progress, hall of fame and next suggestion_
+*Dashboard — active campaign, tier progress, hall of fame and next suggestion*
 
 ![Roadmap](screenshots/roadmap.png)
-_Roadmap — tiered campaign guide with difficulty dots, playstyle tags and DLC info_
+*Roadmap — tiered campaign guide with difficulty dots, playstyle tags and DLC info*
 
 ![Roadmap Expanded](screenshots/roadmap_expanded.png)
-_Expanded card — why to play, key mechanic, campaign tip and victory tracking_
+*Expanded card — why to play, key mechanic, campaign tip and victory tracking*
 
 ![Statistics](screenshots/statistics.png)
-_Statistics — completion charts, playstyle distribution and victory type breakdown_
+*Statistics — completion charts, playstyle distribution and victory type breakdown*
 
 ---
 
@@ -52,12 +57,12 @@ _Statistics — completion charts, playstyle distribution and victory type break
 
 ## Tech Stack
 
-| Tool                                   | Purpose                      |
-| -------------------------------------- | ---------------------------- |
-| [React 18](https://react.dev)          | UI framework                 |
-| [Vite 5](https://vitejs.dev)           | Build tool                   |
-| [Electron](https://www.electronjs.org) | Desktop app wrapper          |
-| [Recharts](https://recharts.org)       | Charts in Statistics         |
+| Tool | Purpose |
+|------|---------|
+| [React 18](https://react.dev) | UI framework |
+| [Vite 5](https://vitejs.dev) | Build tool |
+| [Electron](https://www.electronjs.org) | Desktop app wrapper |
+| [Recharts](https://recharts.org) | Charts in Statistics |
 | [PapaParse](https://www.papaparse.com) | CSV parsing for faction data |
 
 ---
@@ -80,13 +85,11 @@ npm run electron:dev
 ```
 
 Run in the browser instead:
-
 ```bash
 npm run dev
 ```
 
 Build a Windows installer:
-
 ```bash
 npm run electron:build
 ```
