@@ -44,7 +44,7 @@ export default function Statistics({ roadmap, checked, customList }) {
 
     const styleData = Object.entries(
         doneEntries.reduce((acc, e) => {
-            const style = e.style?.replace(/^[^\w]+/, "").trim() ?? "Unknown";
+            const style = e.style?.split(" ").slice(1).join(" ").trim() ?? "Unknown";
             acc[style] = (acc[style] || 0) + 1;
             return acc;
         }, {})
@@ -54,13 +54,6 @@ export default function Statistics({ roadmap, checked, customList }) {
         name: game,
         done: doneEntries.filter(e => e.game === game).length,
         total: allEntries.filter(e => e.game === game).length,
-    }));
-
-    const victoryByType = ["Short", "Long", "Ultimate"].map(v => ({
-        name: v,
-        done: doneEntries.filter(e => e.victory === v).length,
-        total: allEntries.length,
-        color: VICTORY_COLORS[v],
     }));
 
     const dlcData = [
