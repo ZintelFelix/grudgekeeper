@@ -44,23 +44,17 @@ export default function Statistics({ roadmap, checked, customList }) {
 
     const styleData = Object.entries(
         doneEntries.reduce((acc, e) => {
-            const style = e.style?.replace(/^[^\w]+/, "").trim() ?? "Unknown";
-            acc[style] = (acc[style] || 0) + 1;
+            (e.styles ?? []).forEach(s => {
+                acc[s.label] = (acc[s.label] || 0) + 1;
+            });
             return acc;
         }, {})
-    ).map(([name, value]) => ({ name, value }));
+    ).sort((a, b) => b[1] - a[1]).map(([name, value]) => ({ name, value }));
 
     const gameData = ["WH1", "WH2", "WH3"].map(game => ({
         name: game,
         done: doneEntries.filter(e => e.game === game).length,
         total: allEntries.filter(e => e.game === game).length,
-    }));
-
-    const victoryByType = ["Short", "Long", "Ultimate"].map(v => ({
-        name: v,
-        done: doneEntries.filter(e => e.victory === v).length,
-        total: allEntries.length,
-        color: VICTORY_COLORS[v],
     }));
 
     const dlcData = [
@@ -116,9 +110,9 @@ export default function Statistics({ roadmap, checked, customList }) {
                     {styleData.length === 0 ? (
                         <div style={{ fontSize: 13, color: t.text4, fontStyle: "italic" }}>No completed campaigns yet.</div>
                     ) : (
-                        <ResponsiveContainer width="100%" height={200}>
+                        <ResponsiveContainer width="100%" height={280}>
                             <PieChart>
-                                <Pie data={styleData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={75} label={({ name, percent }) => `${name} ${Math.round(percent * 100)}%`} labelLine={false}>
+                                <Pie data={styleData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} innerRadius={30} label={({ name, percent }) => `${name} ${Math.round(percent * 100)}%`} labelLine={true} fontSize={18}>
                                     {styleData.map((_, i) => (
                                         <Cell key={i} fill={["#c8920a", "#4ade80", "#f97316", "#c084fc", "#facc15", "#38bdf8", "#e879f9"][i % 7]} />
                                     ))}
@@ -149,7 +143,7 @@ export default function Statistics({ roadmap, checked, customList }) {
                                 {victoryData.map(v => (
                                     <div key={v.name} style={{ display: "flex", alignItems: "center", gap: 6 }}>
                                         <div style={{ width: 10, height: 10, borderRadius: 2, background: v.color }} />
-                                        <span style={{ fontSize: 11, color: t.text3 }}>{v.name}: {v.value}</span>
+                                        <span style={{ fontSize: 18, color: t.text3 }}>{v.name}: {v.value}</span>
                                     </div>
                                 ))}
                             </div>

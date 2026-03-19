@@ -1,0 +1,25 @@
+id,label,icon,color
+defensive,Defensive,🛡️,#38bdf8
+offensive,Offensive,⚔️,#ef4444
+aggression,Aggression,💀,#f97316
+magic,Magic,✨,#c8920a
+undead,Undead,☠️,#c084fc
+quality,Quality,🏅,#facc15
+monster,Monster,🦎,#4ade80
+tech,Tech,⚙️,#f97316
+naval,Naval,⛵,#5020a0
+trade,Trade,💰,#c8920a
+industry,Industry,🏭,#8a6030
+chaos,Chaos,🌀,#8a1818
+raider,Raider,🪓,#2a5878
+ambush,Ambush,🌲,#5a6820
+guardian,Guardian,🌿,#2a7a3a
+horde,Horde,💀,#4a8a20
+corruption,Corruption,🤢,#5a7820
+ritual,Ritual,🧙,#8030a0
+blood,Blood / Rage,🩸,#c01010
+seduction,Seduction,💜,#8030a0
+manipulation,Manipulation,🔮,#10a090
+custom,Custom,😈,#4a1060
+excess,Excess,🐍,#e879f9
+dragon,Dragon,🐉,#c82020
