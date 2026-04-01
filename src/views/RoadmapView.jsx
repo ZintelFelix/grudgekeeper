@@ -36,6 +36,14 @@ export default function RoadmapView({ roadmap, checked, setChecked, activeCampai
         });
     };
 
+    const saveKills = (key, kills) => {
+        setChecked((p) => {
+            const n = { ...p, [key]: { ...p[key], kills } };
+            save("tww3_checked", n);
+            return n;
+        });
+    };
+
     return (
         <div style={{ display: "flex", flexDirection: "column", height: "100%", overflow: "hidden" }}>
 
