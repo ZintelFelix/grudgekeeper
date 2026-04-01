@@ -10,8 +10,9 @@ const VICTORY_COLORS = { Short: "#facc15", Long: "#4ade80", Ultimate: "#c084fc" 
 
 const isDone = (val) => val?.done ?? !!val;
 const getVictory = (val) => val?.victory ?? null;
+const getKills = (val) => val?.kills ?? 0;
 
-export default function RoadmapView({ roadmap, checked, setChecked, activeCampaign, setActiveCampaign, activeTier, setActiveTier }) {
+export default function RoadmapView({ roadmap, checked, setChecked, activeCampaign, setActiveCampaign, activeTier, setActiveTier, }) {
     const t = useTheme();
     const [openEntry, setOpenEntry] = useState(null);
     const [victoryModal, setVictoryModal] = useState(null);
@@ -85,6 +86,7 @@ export default function RoadmapView({ roadmap, checked, setChecked, activeCampai
                     const victory = getVictory(checked[key]);
                     const isPlaying = activeCampaign === entry.id;
                     const cl = tier.tierColor;
+                    const kills = getKills(checked[key]);
 
                     return (
                         <div key={key} onClick={() => setOpenEntry(isOpen ? null : key)} style={{
@@ -142,6 +144,14 @@ export default function RoadmapView({ roadmap, checked, setChecked, activeCampai
                                                 <div style={{ display: "flex", gap: 7 }}>
                                                     <button onClick={(e) => { e.stopPropagation(); const n = activeCampaign === entry.id ? null : entry.id; save("tww3_activeCampaign", n); setActiveCampaign(n); }} style={{ flex: 1, fontSize: 11, padding: "6px 0", borderRadius: 6, cursor: "pointer", background: activeCampaign === entry.id ? `${cl}25` : "transparent", border: `1px solid ${cl}50`, color: cl, fontFamily: "inherit" }}>{activeCampaign === entry.id ? "▶ Active" : "▷ Start"}</button>
                                                     <button onClick={(e) => { e.stopPropagation(); if (done) { uncomplete(key); } else { setVictoryModal({ key, faction: entry.faction }); } }} style={{ flex: 1, fontSize: 11, padding: "6px 0", borderRadius: 6, cursor: "pointer", background: done ? "rgba(74,222,128,0.15)" : "transparent", border: `1px solid ${done ? "#4ade80" : t.border}`, color: done ? "#4ade80" : t.text3, fontFamily: "inherit" }}>{done ? `✓ ${victory ?? "Done"}` : "Complete"}</button>
+                                                    <div>
+                                                        {done && (
+                                                            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                                                                <span style={{ fontSize: 12, color: cl }}>Kills:</span>
+                                                                <input onClick={(e) => { e.stopPropagation(); }} type="number" value={kills || ""} placeholder="Kills" onChange={e => { e.stopPropagation(); saveKills(key, Number(e.target.value)); }} style={{ flex: 1, fontSize: 12, fontWeight: "bold", padding: "6px 0", paddingLeft: 8, borderRadius: 6, width: "100%", minWidth: 0, background: t.input, border: `1px solid ${cl}50`, color: cl, fontFamily: "inherit" }} />
+                                                            </div>
+                                                        )}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
