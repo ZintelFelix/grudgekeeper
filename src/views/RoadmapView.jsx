@@ -12,7 +12,7 @@ const isDone = (val) => val?.done ?? !!val;
 const getVictory = (val) => val?.victory ?? null;
 const getKills = (val) => val?.kills ?? 0;
 
-export default function RoadmapView({ roadmap, checked, setChecked, activeCampaign, setActiveCampaign, activeTier, setActiveTier, }) {
+export default function RoadmapView({ roadmap, checked, setChecked, activeCampaign, setActiveCampaign, activeTier, setActiveTier }) {
     const t = useTheme();
     const [openEntry, setOpenEntry] = useState(null);
     const [victoryModal, setVictoryModal] = useState(null);
