@@ -5,6 +5,7 @@ const VICTORY_COLORS = { Short: "#facc15", Long: "#4ade80", Ultimate: "#c084fc" 
 
 const isDone = (val) => val?.done ?? !!val;
 const getVictory = (val) => val?.victory ?? null;
+const getKills = (val) => val?.kills ?? 0;
 
 export default function Statistics({ roadmap, checked, customList }) {
     const t = useTheme();
@@ -16,6 +17,7 @@ export default function Statistics({ roadmap, checked, customList }) {
             tierLabel: tier.tierLabel,
             isDone: isDone(checked[`${tier.tier}-${i}`]),
             victory: getVictory(checked[`${tier.tier}-${i}`]),
+            kills: getKills(checked[`${tier.tier}-${i}`]),
         }))
     );
 
@@ -28,6 +30,10 @@ export default function Statistics({ roadmap, checked, customList }) {
     const avgDifficulty = doneEntries.length > 0
         ? (doneEntries.reduce((sum, e) => sum + e.difficulty, 0) / doneEntries.length).toFixed(1)
         : "—";
+
+    const sumKills = doneEntries.reduce((sum, e) => sum + e.kills, 0);
+    const avgKills = doneEntries.length > 0 ? (sumKills / doneEntries.length).toFixed(1) : "—";
+    const topKills = doneEntries.sort((a, b) => b.kills - a.kills).slice(0, 5);
 
     const tagCounts = doneEntries.flatMap(e => e.tags).reduce((acc, tag) => {
         acc[tag] = (acc[tag] || 0) + 1;
@@ -162,6 +168,38 @@ export default function Statistics({ roadmap, checked, customList }) {
                             <Bar dataKey="done" fill={t.accent} radius={[4, 4, 0, 0]} />
                         </BarChart>
                     </ResponsiveContainer>
+                </div>
+
+                <div style={{ background: t.bg3, border: `1px solid ${t.border}`, borderRadius: 10, padding: "18px 20px" }}>
+                    <div style={{ fontSize: 10, color: t.text4, letterSpacing: 2, textTransform: "uppercase", marginBottom: 16 }}>Kill Statistics</div>
+
+                    <div style={{ display: "flex", gap: 12, marginBottom: 16 }}>
+                        <div style={{ flex: 1, background: t.bg2, borderRadius: 8, padding: "12px 14px", border: `1px solid ${t.border}` }}>
+                            <div style={{ fontSize: 10, color: t.text4, letterSpacing: 1, textTransform: "uppercase", marginBottom: 4 }}>Total Kills</div>
+                            <div style={{ fontSize: 28, color: "#f97316", fontWeight: "normal", lineHeight: 1 }}>{sumKills}</div>
+                            <div style={{ fontSize: 11, color: t.text3, marginTop: 3 }}>across all campaigns</div>
+                        </div>
+                        <div style={{ flex: 1, background: t.bg2, borderRadius: 8, padding: "12px 14px", border: `1px solid ${t.border}` }}>
+                            <div style={{ fontSize: 10, color: t.text4, letterSpacing: 1, textTransform: "uppercase", marginBottom: 4 }}>Avg. per Campaign</div>
+                            <div style={{ fontSize: 28, color: t.accent, fontWeight: "normal", lineHeight: 1 }}>{avgKills}</div>
+                            <div style={{ fontSize: 11, color: t.text3, marginTop: 3 }}>kills on average</div>
+                        </div>
+                    </div>
+
+                    {topKills.length > 0 ? (
+                        <div>
+                            <div style={{ fontSize: 10, color: t.text4, letterSpacing: 2, textTransform: "uppercase", marginBottom: 10 }}>Top Lords by Kills</div>
+                            {topKills.map((e, i) => (
+                                <div key={i} style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 7 }}>
+                                    <span style={{ fontSize: 11, color: t.text4, width: 16, textAlign: "right" }}>#{i + 1}</span>
+                                    <span style={{ flex: 1, fontSize: 13, color: t.text1 }}>{e.lord}</span>
+                                    <span style={{ fontSize: 13, color: "#f97316", fontWeight: "bold" }}>{e.kills}</span>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div style={{ fontSize: 13, color: t.text4, fontStyle: "italic" }}>No kills recorded yet.</div>
+                    )}
                 </div>
 
                 <div style={{ background: t.bg3, border: `1px solid ${t.border}`, borderRadius: 10, padding: "18px 20px", gridColumn: "1 / -1" }}>
