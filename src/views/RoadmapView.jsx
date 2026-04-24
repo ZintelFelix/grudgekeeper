@@ -12,10 +12,14 @@ const isDone = (val) => val?.done ?? !!val;
 const getVictory = (val) => val?.victory ?? null;
 const getKills = (val) => val?.kills ?? 0;
 
+
 export default function RoadmapView({ roadmap, checked, setChecked, activeCampaign, setActiveCampaign, activeTier, setActiveTier }) {
     const t = useTheme();
     const [openEntry, setOpenEntry] = useState(null);
     const [victoryModal, setVictoryModal] = useState(null);
+    const [killsModal, setKillsModal] = useState(null);
+    const [killInput, setKillInput] = useState(0);
+
 
     const tier = roadmap.find((r) => r.tier === activeTier) || roadmap[0];
     if (!tier) return null;
@@ -27,6 +31,7 @@ export default function RoadmapView({ roadmap, checked, setChecked, activeCampai
             return n;
         });
         setVictoryModal(null);
+        setKillsModal({ key, lord: victoryModal.lord });
     };
 
     const uncomplete = (key) => {
@@ -61,6 +66,29 @@ export default function RoadmapView({ roadmap, checked, setChecked, activeCampai
                             ))}
                         </div>
                         <button onClick={() => setVictoryModal(null)} style={{ marginTop: 16, fontSize: 12, color: t.text4, background: "transparent", border: "none", cursor: "pointer", fontFamily: "inherit" }}>Cancel</button>
+                    </div>
+                </div>
+            )}
+
+            {killsModal && (
+                <div onClick={() => setKillsModal(null)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", zIndex: 200, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <div onClick={(e) => e.stopPropagation()} style={{ background: t.bg2, border: `1px solid ${t.border}`, borderRadius: 14, padding: "30px 36px", minWidth: 340, boxShadow: "0 20px 60px rgba(0,0,0,0.5)", textAlign: "center" }}>
+                        <div style={{ fontSize: 28, marginBottom: 10 }}>⚔️</div>
+                        <div style={{ fontSize: 10, letterSpacing: 4, color: t.text4, textTransform: "uppercase", marginBottom: 6 }}>Kill Count</div>
+                        <div style={{ fontSize: 18, color: t.text1, marginBottom: 4 }}>{killsModal.lord}</div>
+                        <div style={{ fontSize: 13, color: t.text4, marginBottom: 18 }}>How many lords did you slay?</div>
+                        <input
+                            autoFocus
+                            type="number"
+                            value={killInput || ""}
+                            placeholder="0"
+                            onChange={(e) => setKillInput(Number(e.target.value))}
+                            style={{ fontSize: 22, padding: "10px 16px", borderRadius: 8, border: `1px solid ${t.border}`, background: t.input, color: "#f97316", fontFamily: "inherit", width: "100%", boxSizing: "border-box", textAlign: "center", marginBottom: 18, outline: "none" }}
+                        />
+                        <div style={{ display: "flex", gap: 10, justifyContent: "center" }}>
+                            <button onClick={() => { saveKills(killsModal.key, killInput); setKillInput(0); setKillsModal(null); }} style={{ fontSize: 13, padding: "10px 24px", borderRadius: 8, cursor: "pointer", background: "rgba(249,115,22,0.15)", border: "1px solid rgba(249,115,22,0.5)", color: "#f97316", fontFamily: "inherit" }}>Confirm</button>
+                            <button onClick={() => { setKillInput(0); setKillsModal(null); }} style={{ fontSize: 13, padding: "10px 24px", borderRadius: 8, cursor: "pointer", background: "transparent", border: `1px solid ${t.border}`, color: t.text4, fontFamily: "inherit" }}>Skip</button>
+                        </div>
                     </div>
                 </div>
             )}
@@ -100,7 +128,7 @@ export default function RoadmapView({ roadmap, checked, setChecked, activeCampai
                             <div style={{ padding: isOpen ? "20px 22px" : "15px 16px", flex: 1 }}>
 
                                 <div style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 9 }}>
-                                    <div onClick={(e) => { e.stopPropagation(); if (done) { uncomplete(key); } else { setVictoryModal({ key, faction: entry.faction }); } }} style={{ width: 21, height: 21, borderRadius: 4, flexShrink: 0, border: `1px solid ${done ? "#4ade80" : t.inputBorder}`, background: done ? "rgba(74,222,128,0.18)" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, color: "#4ade80", transition: "all 0.2s", marginTop: 2, cursor: "pointer" }}>{done && "✓"}</div>
+                                    <div onClick={(e) => { e.stopPropagation(); if (done) { uncomplete(key); } else { setVictoryModal({ key, faction: entry.faction, lord: entry.lord }); } }} style={{ width: 21, height: 21, borderRadius: 4, flexShrink: 0, border: `1px solid ${done ? "#4ade80" : t.inputBorder}`, background: done ? "rgba(74,222,128,0.18)" : "transparent", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, color: "#4ade80", transition: "all 0.2s", marginTop: 2, cursor: "pointer" }}>{done && "✓"}</div>
                                     <div style={{ flex: 1 }}>
                                         <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 2, flexWrap: "wrap" }}>
                                             <span style={{ fontSize: isOpen ? 19 : 15, color: done ? t.text5 : t.text1, textDecoration: done ? "line-through" : "none" }}>{entry.faction}</span>
@@ -143,7 +171,7 @@ export default function RoadmapView({ roadmap, checked, setChecked, activeCampai
                                                 </div>
                                                 <div style={{ display: "flex", gap: 7 }}>
                                                     <button onClick={(e) => { e.stopPropagation(); const n = activeCampaign === entry.id ? null : entry.id; save("tww3_activeCampaign", n); setActiveCampaign(n); }} style={{ flex: 1, fontSize: 11, padding: "6px 0", borderRadius: 6, cursor: "pointer", background: activeCampaign === entry.id ? `${cl}25` : "transparent", border: `1px solid ${cl}50`, color: cl, fontFamily: "inherit" }}>{activeCampaign === entry.id ? "▶ Active" : "▷ Start"}</button>
-                                                    <button onClick={(e) => { e.stopPropagation(); if (done) { uncomplete(key); } else { setVictoryModal({ key, faction: entry.faction }); } }} style={{ flex: 1, fontSize: 11, padding: "6px 0", borderRadius: 6, cursor: "pointer", background: done ? "rgba(74,222,128,0.15)" : "transparent", border: `1px solid ${done ? "#4ade80" : t.border}`, color: done ? "#4ade80" : t.text3, fontFamily: "inherit" }}>{done ? `✓ ${victory ?? "Done"}` : "Complete"}</button>
+                                                    <button onClick={(e) => { e.stopPropagation(); if (done) { uncomplete(key); } else { setVictoryModal({ key, faction: entry.faction, lord: entry.lord }); } }} style={{ flex: 1, fontSize: 11, padding: "6px 0", borderRadius: 6, cursor: "pointer", background: done ? "rgba(74,222,128,0.15)" : "transparent", border: `1px solid ${done ? "#4ade80" : t.border}`, color: done ? "#4ade80" : t.text3, fontFamily: "inherit" }}>{done ? `✓ ${victory ?? "Done"}` : "Complete"}</button>
                                                     <div>
                                                         {done && (
                                                             <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
