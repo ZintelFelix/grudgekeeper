@@ -33,7 +33,7 @@ export default function Statistics({ roadmap, checked, customList }) {
 
     const sumKills = doneEntries.reduce((sum, e) => sum + e.kills, 0);
     const avgKills = doneEntries.length > 0 ? (sumKills / doneEntries.length).toFixed(1) : "—";
-    const topKills = doneEntries.sort((a, b) => b.kills - a.kills).slice(0, 5);
+    const topKills = [...doneEntries].sort((a, b) => b.kills - a.kills).slice(0, 5);
 
     const tagCounts = doneEntries.flatMap(e => e.tags).reduce((acc, tag) => {
         acc[tag] = (acc[tag] || 0) + 1;
