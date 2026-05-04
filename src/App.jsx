@@ -3,7 +3,8 @@ import { ThemeCtx, DARK, LIGHT } from "./context/ThemeContext";
 import usePersist from "./hooks/usePersist";
 import useCSV, {
   buildRoadmap,
-  buildRaces
+  buildRaces,
+  buildStyles
 } from "./hooks/useCSV";
 
 import Dashboard from "./views/Dashboard";
@@ -27,9 +28,11 @@ export default function App() {
   const [showPicker, setShowPicker] = useState(false);
 
   const { data: roadmapCsv, loading: loadingRoadmap } = useCSV("/data/roadmap.csv");
+  const { data: stylesCsv, loading: loadingStyles } = useCSV("/data/styles.csv");
   const { data: racesCsv, loading: loadingRaces } = useCSV("/data/races.csv");
 
-  const roadmap = loadingRoadmap ? [] : buildRoadmap(roadmapCsv);
+  const styles = loadingStyles ? [] : buildStyles(stylesCsv);
+  const roadmap = loadingRoadmap ? [] : buildRoadmap(roadmapCsv, styles);
   const races = loadingRaces ? [] : buildRaces(racesCsv);
 
   const theme = isDark ? DARK : LIGHT;
