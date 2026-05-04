@@ -142,7 +142,9 @@ export default function RoadmapView({ roadmap, checked, setChecked, activeCampai
 
                                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 7 }}>
                                     <DiffDots value={entry.difficulty} color={cl} />
-                                    <span style={{ fontSize: 11, color: t.text3 }}>{entry.style}</span>
+                                    <span style={{ fontSize: 11, color: t.text3 }}>
+                                        {entry.styles?.[0]?.icon} {entry.styles?.[0]?.label}
+                                    </span>
                                 </div>
                                 <div style={{ display: "flex", gap: 5, flexWrap: "wrap" }}>
                                     {entry.tags.map((tag) => <Tag key={tag} label={tag} color={cl} />)}
