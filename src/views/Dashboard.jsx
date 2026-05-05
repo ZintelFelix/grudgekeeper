@@ -1,5 +1,5 @@
 import { useTheme } from "../context/ThemeContext";
-import { isDone, getVictory, getKills, VICTORIES, VICTORY_COLORS } from "../utils/constants";
+import { isDone, VICTORY_COLORS } from "../utils/constants";
 import DiffDots from "../components/DiffDots";
 import Tag from "../components/Tag";
 
