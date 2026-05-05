@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
-
-const VICTORIES = ["Short", "Long", "Ultimate"];
-const VICTORY_COLORS = { Short: "#facc15", Long: "#4ade80", Ultimate: "#c084fc" };
+import { isDone, getVictory, getKills, VICTORIES, VICTORY_COLORS } from "../utils/constants";
 
 export default function MyList({ customList, setCustomList }) {
     const t = useTheme();

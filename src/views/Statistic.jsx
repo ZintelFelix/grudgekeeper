@@ -1,11 +1,6 @@
 import { useTheme } from "../context/ThemeContext";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart, Pie } from "recharts";
-
-const VICTORY_COLORS = { Short: "#facc15", Long: "#4ade80", Ultimate: "#c084fc" };
-
-const isDone = (val) => val?.done === true;
-const getVictory = (val) => val?.victory ?? null;
-const getKills = (val) => val?.kills ?? 0;
+import { isDone, getVictory, getKills, VICTORY_COLORS } from "../utils/constants";
 
 export default function Statistics({ roadmap, checked, customList }) {
     const t = useTheme();

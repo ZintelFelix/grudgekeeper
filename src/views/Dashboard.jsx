@@ -1,8 +1,7 @@
 import { useTheme } from "../context/ThemeContext";
+import { isDone, VICTORY_COLORS } from "../utils/constants";
 import DiffDots from "../components/DiffDots";
 import Tag from "../components/Tag";
-
-const isDone = (val) => val?.done === true;
 
 export default function Dashboard({ roadmap, checked, activeCampaign, setActiveCampaign }) {
     const t = useTheme();
