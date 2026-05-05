@@ -1,14 +1,9 @@
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { save } from "../hooks/usePersist";
+import { isDone, getVictory, getKills, VICTORIES, VICTORY_COLORS } from "../utils/constants";
 import DiffDots from "../components/DiffDots";
 import Tag from "../components/Tag";
-
-const VICTORIES = ["Short", "Long", "Ultimate"];
-const VICTORY_COLORS = { Short: "#facc15", Long: "#4ade80", Ultimate: "#c084fc" };
-
-const isDone = (val) => val?.done === true;
-const getVictory = (val) => val?.victory ?? null;
 
 export default function AllFactions({ roadmap, checked, setChecked, activeCampaign, setActiveCampaign }) {
     const t = useTheme();
