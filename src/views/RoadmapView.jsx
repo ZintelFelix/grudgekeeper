@@ -8,7 +8,7 @@ import PressureBadge from "../components/PressureBadge";
 const VICTORIES = ["Short", "Long", "Ultimate"];
 const VICTORY_COLORS = { Short: "#facc15", Long: "#4ade80", Ultimate: "#c084fc" };
 
-const isDone = (val) => val?.done ?? !!val;
+const isDone = (val) => val?.done === true;
 const getVictory = (val) => val?.victory ?? null;
 const getKills = (val) => val?.kills ?? 0;
 
